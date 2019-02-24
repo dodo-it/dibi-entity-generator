@@ -1,0 +1,31 @@
+{
+  "name": "dodo-it/dibi-entity-generator",
+  "type": "library",
+  "description": "Entity generator from database for dibi",
+  "keywords": ["dibi", "entity", "mysql", "database", "table", "generator", "nette"],
+  "license": ["MIT"],
+  "authors": [
+    {
+      "name": "Dalibor Korpar"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "DodoIt\\DibiEntityGenerator\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "DodoIt\\DibiEntityGenerator\\Tests\\": "tests"
+    }
+  },
+  "require": {
+    "php": "^7.1",
+    "dodo-it/entity-generator": "~1.0",
+    "dibi/dibi": "^4.0",
+    "nette/di": "^2.4"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^8.0"
+  }
+}

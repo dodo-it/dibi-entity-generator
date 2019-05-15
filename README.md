@@ -30,8 +30,45 @@ entityGenerator:
     extends: App\Model\Entities\BaseEntity
     generateGetters: false
     generateSetters: false
+    extends: DodoIt\EntityGenerator\Entity
     propertyVisibility: 'public'
 ```
 You can see list of all options and their default values in: 
 https://github.com/dodo-it/entity-generator/blob/master/src/Generator/Config.php
     
+## Usage
+
+### Abstract entity class
+ First create your BaseEntity class which all entities will extends and set option extends to that class in your configuration.
+ As a starting point you can just Use Dibi\Row and set to only generate phpdoc comments that way nothing will change but you will have full autocomplete in your queries. 
+Better scenario would be to generate getters and setters which then can have return typehints...
+
+### Example code in repository
+```php
+public function getById(int $id): ArticleEntity
+{
+		return $this->db->select('*')->from('articles')->where('id = %i', $id)
+				->execute()
+				->setRowClass(ArticleEntity::class)
+				->fetch();
+}
+```
+
+### Generate all
+To generate all entities run from database tables and views run
+```ssh
+console entity:generate 
+```
+### Generate one table/view only
+
+```ssh
+console entity:generate table_name
+```
+
+### Generate from query
+Write your query in .sql file and put it into app/Models/Queries/
+after that run command:
+
+```ssh
+ console entity:generate --query-file=app/Models/Queries/Query.sql EntityName
+```

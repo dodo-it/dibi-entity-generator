@@ -1,5 +1,5 @@
 # Dibi Entity generator
-Typed entity generator from database. It can generate entities for whole database, table/view and from query.
+Highly configurable typed entity generator from database. It can generate entities for whole database, table/view and from query.
 
 This is dibi/nette bridge for https://github.com/dodo-it/entity-generator/
 

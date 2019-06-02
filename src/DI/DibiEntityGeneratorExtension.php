@@ -6,7 +6,6 @@ use DodoIt\DibiEntityGenerator\Command\GenerateCommand;
 use DodoIt\DibiEntityGenerator\Repository\DibiRepository;
 use DodoIt\EntityGenerator\Generator\Config;
 use DodoIt\EntityGenerator\Generator\Generator;
-use DodoIt\EntityGenerator\Repository\IRepository;
 use Nette\DI\CompilerExtension;
 use Nette\DI\Helpers;
 

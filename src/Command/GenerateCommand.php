@@ -13,6 +13,11 @@ class GenerateCommand extends Command
 {
 
 	/**
+	 * @var string
+	 */
+	protected static $defaultName = 'entity:generate';
+
+	/**
 	 * @var Generator
 	 */
 	private $generator;

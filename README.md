@@ -66,9 +66,16 @@ console entity:generate table_name
 ```
 
 ### Generate from query
-Write your query in .sql file and put it into app/Models/Queries/
+Write your query in .sql file
 after that run command:
 
 ```ssh
- console entity:generate --query-file=app/Models/Queries/Query.sql EntityName
+ console entity:generate --query-file=path/to/QueryFile.sql EntityName
+```
+
+### Generate from directory where query sql files are
+Write your queries in one folder in .sql files and (re) generate entities for all queries with:
+
+```ssh
+ console entity:generate --query-dir=/path/to/dir
 ```

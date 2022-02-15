@@ -21,7 +21,7 @@
   },
   "require": {
     "php": "^7.1|^8.0",
-    "dodo-it/entity-generator": "~1.0",
+    "dodo-it/entity-generator": "^1.0",
     "dibi/dibi": "^4.0",
     "nette/di": "^2.4 | ^3.0"
   },

@@ -9,9 +9,9 @@ use DodoIt\EntityGenerator\Repository\IRepository;
 class DibiRepository implements IRepository
 {
 	/**
-	 * @var Connection
+	 * @var
 	 */
-	private $db;
+	private Connection $db;
 
 
 	public function __construct(Connection $db)

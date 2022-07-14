@@ -18,10 +18,7 @@ class GenerateCommand extends Command
 	 */
 	protected static $defaultName = 'entity:generate';
 
-	/**
-	 * @var Generator
-	 */
-	private $generator;
+	private Generator $generator;
 
 	public function __construct(Generator $generator)
 	{

@@ -20,18 +20,16 @@
     }
   },
   "require": {
-    "php": "^7.1|^8.0",
-    "dodo-it/entity-generator": "~1.0",
+    "php": "^8.0",
+    "dodo-it/entity-generator": "~2.0",
     "dibi/dibi": "^4.0",
-    "nette/di": "^2.4 | ^3.0"
+    "nette/di": "^3.0"
   },
-  "require-dev": {
-    "phpunit/phpunit": "^8.0"
-  },  "minimum-stability": "dev",
+ "minimum-stability": "dev",
   "prefer-stable": true,
   "extra": {
     "branch-alias": {
-      "dev-master": "1.1.x-dev"
+      "dev-master": "2.1.x-dev"
     }
   }
 

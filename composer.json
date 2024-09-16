@@ -22,7 +22,7 @@
   "require": {
     "php": "^8.1",
     "dodo-it/entity-generator": "~2.1",
-    "dibi/dibi": "^4.0",
+    "dibi/dibi": "^4.0 | ^5.0",
     "nette/di": "^3.1"
   },
  "minimum-stability": "dev",

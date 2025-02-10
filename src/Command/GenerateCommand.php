@@ -4,12 +4,14 @@ namespace DodoIt\DibiEntityGenerator\Command;
 
 use DodoIt\EntityGenerator\Generator\Generator;
 use Nette\Utils\Finder;
+use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 
+#[AsCommand('entity:generate', 'Generate entities from database')]
 class GenerateCommand extends Command
 {
 
@@ -39,7 +41,7 @@ class GenerateCommand extends Command
 	}
 
 
-	protected function execute(InputInterface $input, OutputInterface $output)
+	protected function execute(InputInterface $input, OutputInterface $output): int
 	{
 		if ($dir = $input->getOption('query-dir')) {
 			/**
@@ -50,7 +52,7 @@ class GenerateCommand extends Command
 				$this->generator->generate($file->getBasename('.sql'), file_get_contents($filepath));
 			}
 
-			return;
+			return 0;
 		}
 
 		$query = $input->getOption('query');
@@ -59,6 +61,7 @@ class GenerateCommand extends Command
 			$query = file_get_contents($input->getOption('query-file'));
 		}
 		$this->generator->generate($input->getArgument('table'), $query);
+
 		return 0;
 	}
 }
